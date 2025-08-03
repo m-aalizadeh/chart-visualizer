@@ -1,7 +1,7 @@
-import React from 'react';
-import SingleSeriesChart from './SingleSeriesChart';
-import MultiSeriesChart from './MultiSeriesChart';
-import type { ChartData } from '../../types/chartTypes';
+import React from "react";
+import SingleSeriesChart from "./SingleSeriesChart";
+import MultiSeriesChart from "./MultiSeriesChart";
+import type { ChartData } from "../types/chartTypes";
 
 interface ChartProps {
   chartData: ChartData;
@@ -18,7 +18,9 @@ const Chart: React.FC<ChartProps> = ({ chartData }) => {
     <div className="m-5 p-4 border rounded-lg shadow-md">
       <h2 className="text-xl font-bold mb-4">{chartData.title}</h2>
       {isMultiSeries ? (
-        <MultiSeriesChart data={chartData.data as [number, (number | null)[]][]} />
+        <MultiSeriesChart
+          data={chartData.data as [number, (number | null)[]][]}
+        />
       ) : (
         <SingleSeriesChart data={chartData.data as [number, number | null][]} />
       )}

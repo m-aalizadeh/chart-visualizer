@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Chart from "./components/Chart/Chart";
+import Chart from "./components/Chart";
 import type { ChartData } from "./types/chartTypes";
 import "./App.css";
 
